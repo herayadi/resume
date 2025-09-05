@@ -14,12 +14,12 @@
                             <h2>I am Heri Rahmat</h2>
                             <p class="lead">
                                 I'm a
-                                <span class="typed" data-typed-items="Webmethods Developer, API Developer"></span>
+                                <span class="typed"
+                                    data-typed-items="Webmethods Developer, API and ESB Expert "></span>
                             </p>
                             <p class="description">
-                                Passionate about creating exceptional digital experiences
-                                that blend innovative design with functional development.
-                                Let's bring your vision to life.
+                                Driving performance and scalability with clean integration, smart automation, and solid
+                                architecture.
                             </p>
 
                             <div class="hero-actions">

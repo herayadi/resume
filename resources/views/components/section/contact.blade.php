@@ -12,39 +12,34 @@
                   <div class="info-box">
                       <h3>Contact Info</h3>
 
-                      <a href="https://maps.app.goo.gl/5WSZ3LeMMNTkUEtUA">
-                          <div class="info-item">
-                              <div class="icon-box">
-                                  <i class="bi bi-geo-alt"></i>
-                              </div>
-                              <div class="content">
-                                  <h4>Our Location</h4>
-                                  <p>Grogol Petamburan</p>
-                                  <p>Jakarta Barat, DKI Jakarta 11450</p>
-                              </div>
+                      <a href="https://maps.app.goo.gl/5WSZ3LeMMNTkUEtUA" class="info-item">
+                          <div class="icon-box">
+                              <i class="bi bi-geo-alt"></i>
+                          </div>
+                          <div class="content">
+                              <h4>Our Location</h4>
+                              <p>Grogol Petamburan</p>
+                              <p>Jakarta Barat, DKI Jakarta 11450</p>
                           </div>
                       </a>
 
-                      {{-- <div class="info-item">
-                                <div class="icon-box">
-                                    <i class="bi bi-telephone"></i>
-                                </div>
-                                <div class="content">
-                                    <h4>Phone Number</h4>
-                                    <p>+1 5589 55488 55</p>
-                                    <p>+1 6678 254445 41</p>
-                                </div>
-                            </div> --}}
+                      <a href="https://github.com/herayadi" class="info-item">
+                          <div class="icon-box">
+                              <i class="bi bi-github"></i>
+                          </div>
+                          <div class="content">
+                              <h4>Herayadi</h4>
+                              <p>herayadi</p>
+                          </div>
+                      </a>
 
-                      <a href="mailto:herirahmatsuryadi@gmail.com">
-                          <div class="info-item">
-                              <div class="icon-box">
-                                  <i class="bi bi-envelope"></i>
-                              </div>
-                              <div class="content">
-                                  <h4>Email Address</h4>
-                                  <p>herirahmatsuryadi@gmail.com</p>
-                              </div>
+                      <a href="mailto:herirahmatsuryadi@gmail.com" class="info-item">
+                          <div class="icon-box">
+                              <i class="bi bi-envelope"></i>
+                          </div>
+                          <div class="content">
+                              <h4>Email Address</h4>
+                              <p>herirahmatsuryadi@gmail.com</p>
                           </div>
                       </a>
                   </div>
@@ -54,8 +49,7 @@
                   <div class="contact-form">
                       <h3>Get In Touch</h3>
                       <p>
-                          Praesent sapien massa, convallis a pellentesque nec, egestas
-                          non nisi. Vestibulum ante ipsum primis.
+                          Reach out—whether it’s a project, a question, or just to say hello.
                       </p>
 
                       <form action="forms/contact.php" method="post" class="php-email-form">

@@ -16,17 +16,17 @@
 
                       <div class="profile-content">
                           <h3>Heri Rahmat</h3>
-                          <p class="profession">Webmethods Developer &amp; Web Developer</p>
+                          <p class="profession">Webmethods Developer</p>
+                          <p class="profession">API &amp; ESB Developer</p>
 
                           <div class="contact-links">
                               <a href="mailto:herirahmatsuryadi@gmail.com" class="contact-item">
                                   <i class="bi bi-envelope"></i>
                                   herirahmatsuryadi@gmail.com
                               </a>
-                              {{-- <a href="tel:+15551234567" class="contact-item">
-                                        <i class="bi bi-telephone"></i>
-                                        +1 (555) 123-4567
-                                    </a> --}}
+                              <a href="https://github.com/herayadi" class="contact-item"><i class="bi bi-github"></i>
+                                  Herayadi
+                              </a>
                               <a href="#" class="contact-item">
                                   <i class="bi bi-geo-alt"></i>
                                   Jakarta, Indonesia
@@ -45,15 +45,16 @@
 
                       <div class="description">
                           <p>
-                              Middleware Developer with 3+ years of experience in developing, integrating APIs, and
-                              managing ESB systems. Certified in various technologies such as webMethods, TIBCO, and
-                              UiPath. Skilled in developing API-based solutions, data migration, and improving system
-                              efficiency.
+                              Middleware Developer with a proven ability to design and integrate APIs, manage enterprise
+                              service bus (ESB) systems, and streamline complex workflows. Specialized in webMethods,
+                              supported by industry certifications and practical expertise in enterprise integration.
+                              Adept at building API-driven solutions, executing data migration strategies, and enhancing
+                              overall system performance.
                           </p>
 
                       </div>
 
-                      <div class="stats-grid">
+                      {{-- <div class="stats-grid">
                           <div class="stat-item">
                               <div class="stat-number">150+</div>
                               <div class="stat-label">Projects Completed</div>
@@ -66,7 +67,7 @@
                               <div class="stat-number">98%</div>
                               <div class="stat-label">Client Satisfaction</div>
                           </div>
-                      </div>
+                      </div> --}}
 
                       <div class="details-grid">
                           <div class="detail-row">

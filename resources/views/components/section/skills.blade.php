@@ -3,10 +3,10 @@
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
             <h2>Skills</h2>
-            <p>
+            {{-- <p>
                 Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
                 consectetur velit
-            </p>
+            </p> --}}
         </div>
         <!-- End Section Title -->
 
