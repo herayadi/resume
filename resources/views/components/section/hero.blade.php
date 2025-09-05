@@ -11,7 +11,7 @@
                     <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
                         <div class="hero-text">
                             <h1><span class="accent-text">Hi</span></h1>
-                            <h2>Heri Rahmat</h2>
+                            <h2>I am Heri Rahmat</h2>
                             <p class="lead">
                                 I'm a
                                 <span class="typed" data-typed-items="Webmethods Developer, API Developer"></span>
@@ -23,7 +23,7 @@
                             </p>
 
                             <div class="hero-actions">
-                                <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                                <a href="#resume" class="btn btn-primary">View My Work</a>
                                 <a href="#contact" class="btn btn-outline">Get In Touch</a>
                             </div>
 

@@ -34,11 +34,17 @@
                          <h3 class="mt-4">Contact Information</h3>
                          <ul class="contact-info list-unstyled">
                              <li>
-                                 <i class="bi bi-geo-alt"></i> Jakarta Barat, DKI Jakarta, Indonesia
+                                 <a href="https://maps.app.goo.gl/xbjvQuEevdkiZRKK7"> <i class="bi bi-geo-alt"></i>
+                                     Jakarta Barat, DKI Jakarta, Indonesia</a>
                              </li>
-                             <li><i class="bi bi-envelope"></i> herirahmatsuryadi@gmail.com</li>
                              <li>
-                                 <i class="bi bi-linkedin"></i> Heri Rahmat Suryadi
+                                 <a href="mailto:herirahmatsuryadi@gmail.com"> <i class="bi bi-envelope"></i>
+                                     herirahmatsuryadi@gmail.com
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="https://www.linkedin.com/in/heri-rahmat-suryadi/"> <i
+                                         class="bi bi-linkedin"></i> Heri Rahmat Suryadi</a>
                              </li>
                          </ul>
 
@@ -101,51 +107,94 @@
                          </h3>
 
                          <div class="resume-item">
-                             <h4>Senior Software Architect</h4>
-                             <h5>2022 - Present</h5>
+                             <h4>Software Developer - Webmethods Developer</h4>
+                             <h5>May 2025 - Present</h5>
                              <p class="company">
-                                 <i class="bi bi-building"></i> Tech Innovations Inc.
+                                 <i class="bi bi-building"></i> PT. Bank Syariah Indonesia (Client) – PT. Indocyber
+                                 Global Teknologi
                              </p>
                              <ul>
                                  <li>
-                                     Lead the architectural design and implementation of
-                                     enterprise-scale applications
+                                     Support performance test
                                  </li>
                                  <li>
-                                     Mentor team of 12 developers and establish technical best
-                                     practices
+                                     Support Simulation Test
                                  </li>
                                  <li>
-                                     Drive adoption of microservices architecture and
-                                     cloud-native solutions
+                                     Migrate service to higher version
+                                 </li>
+                             </ul>
+                         </div>
+                         <div class="resume-item">
+                             <h4>IT Delivery - Webmethods Developer</h4>
+                             <h5>April 2024 - Maret 2025</h5>
+                             <p class="company">
+                                 <i class="bi bi-building"></i> PT AIA Financial (Client) – PT. Indocyber
+                                 Global Teknologi
+                             </p>
+                             <ul>
+                                 <li>
+                                     Set up and configure ESB environments, including creating connectors, adapters, and
+                                     APIs.
                                  </li>
                                  <li>
-                                     Reduce system downtime by 75% through improved
-                                     architecture and monitoring
+                                     Manage ESB instances across different environments (development, testing,
+                                     production).
+                                 </li>
+                                 <li>
+                                     Establish communication between APIs through an API ESB, ensuring standardization
+                                     and security measures
+                                 </li>
+                             </ul>
+                         </div>
+                         <div class="resume-item">
+                             <h4>Middleware Developer</h4>
+                             <h5>December 2023 - Maret 2024</h5>
+                             <p class="company">
+                                 <i class="bi bi-building"></i> PT. Indocyber Global Teknologi
+                             </p>
+                             <ul>
+                                 <li>
+                                     Develop API Rest JSON and Rest XML as provider JDBC Adapter MySQ
+                                 </li>
+                                 <li>
+                                     Develop API Soap XML as provider JDBC Adapter Oracle
+                                 </li>
+                                 <li>
+                                     Develop API Log Handling
+                                 </li>
+                                 <li>
+                                     Develop a flow service to migrate the 'customers' data table from MySQL to the
+                                     'mst_customer' data table in the Oracle database using an API
+                                 </li>
+                                 <li>
+                                     Establish communication between APIs through an API ESB, ensuring standardization
+                                     and security measures.
+                                 </li>
+                                 <li>
+                                     Each customer who possesses document files can upload them to the File Server, with
+                                     the file storage address being saved in the database. Additionally, they have the
+                                     capability to download files stored on the File Server
+                                 </li>
+                             </ul>
+                         </div>
+                         <div class="resume-item">
+                             <h4>Middleware Developer </h4>
+                             <h5>May 2025 - Present</h5>
+                             <p class="company">
+                                 <i class="bi bi-building"></i> PT Dharmapala Usaha Sukses (Client) – PT. Indocyber
+                                 Global Teknologi
+                             </p>
+                             <ul>
+                                 <li>
+                                     Develop API for Mobile Applications using PHP and Laravel
+                                 </li>
+                                 <li>
+                                     Engage in Fullstack development
                                  </li>
                              </ul>
                          </div>
 
-                         <div class="resume-item">
-                             <h4>Lead Developer</h4>
-                             <h5>2019 - 2022</h5>
-                             <p class="company">
-                                 <i class="bi bi-building"></i> Digital Solutions Corp.
-                             </p>
-                             <ul>
-                                 <li>
-                                     Spearheaded development of company's flagship product
-                                     reaching 1M+ users
-                                 </li>
-                                 <li>
-                                     Implemented CI/CD pipeline reducing deployment time by 60%
-                                 </li>
-                                 <li>
-                                     Managed team of 8 developers across multiple projects
-                                 </li>
-                                 <li>Increased code test coverage from 45% to 90%</li>
-                             </ul>
-                         </div>
                      </div>
 
                      <!-- Education Section -->
@@ -168,13 +217,21 @@
                          <h3><i class="bi bi-award me-2"></i>Certifications</h3>
 
                          <div class="resume-item">
-                             <h4>AWS Certified Solutions Architect - Professional</h4>
-                             <h5>2023</h5>
+                             <h4>Software AG Certified webMethods Integration Professional</h4>
+                             <h5>2022-2025</h5>
                          </div>
 
                          <div class="resume-item">
-                             <h4>Google Cloud Professional Architect</h4>
+                             <h4>Software AG Certified webMethods API Management Professional</h4>
+                             <h5>2023-2026</h5>
+                         </div>
+                         <div class="resume-item">
+                             <h4>Software AG Certified webMethods Integration Associate</h4>
                              <h5>2022</h5>
+                         </div>
+                         <div class="resume-item">
+                             <h4>Software AG Certified webMethods API Management Associate</h4>
+                             <h5>2023</h5>
                          </div>
                      </div>
                  </div>
