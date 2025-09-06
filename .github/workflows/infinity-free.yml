@@ -27,3 +27,4 @@ jobs:
           server-dir: /heri-rahmat.great-site.net/htdocs/ # For addon domains
           timeout: 86400000
           log-level: standard
+          ftp-passive: true
