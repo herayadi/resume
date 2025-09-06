@@ -1426,6 +1426,7 @@ section,
 
 .resume .resume-side .profile-img {
     text-align: center;
+    margin-bottom: 3rem;
 }
 
 .resume .resume-side .profile-img img {
@@ -1438,9 +1439,16 @@ section,
 
 .resume .resume-side h3 {
     font-size: 1.5rem;
+    /* margin-top: 2rem; */
     margin-bottom: 1rem;
     color: var(--heading-color);
     font-weight: 600;
+}
+
+.resume .resume-side p,
+.resume .resume-side .contact-info,
+.resume .resume-side .skills-animation {
+    margin-bottom: 3rem;
 }
 
 .resume .resume-side .contact-info li {

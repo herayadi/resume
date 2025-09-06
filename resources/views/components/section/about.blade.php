@@ -6,8 +6,8 @@
                   <div class="profile-card">
                       <div class="profile-header">
                           <div class="profile-image">
-                              <img src="{{ asset('assets/img/profile/profile-square-3.webp') }}" alt="Profile Image"
-                                  class="img-fluid" />
+                              <img src="{{ secure_asset('assets/img/profile/profile-square-3.webp') }}"
+                                  alt="Profile Image" class="img-fluid" />
                           </div>
                           <div class="profile-badge">
                               <i class="bi bi-check-circle-fill"></i>
@@ -40,7 +40,7 @@
                   <div class="about-content">
                       <div class="section-header">
                           <span class="badge-text">Get to Know Me</span>
-                          <h2>Passionate About Creating Digital Experiences</h2>
+                          <h2>Optimizing Business Workflows with High-Performance Middleware Solutions</h2>
                       </div>
 
                       <div class="description">

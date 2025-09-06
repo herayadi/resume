@@ -4,10 +4,10 @@
          <div class="container section-title" data-aos="fade-up">
              <h2>Resume</h2>
              <p>
-                 Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-                 aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-                 quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-                 fugiat sit in iste officiis commodi quidem hic quas.
+                 Experienced Middleware & Integration Specialist with a strong foundation in enterprise architecture and
+                 API development. Proven track record in implementing scalable solutions using webMethods, optimizing
+                 ESB systems, and automating complex business processes. Skilled in cross-functional collaboration,
+                 agile delivery, and driving digital transformation across industries.
              </p>
          </div>
          <!-- End Section Title -->
@@ -17,17 +17,17 @@
                  <!-- Left column with summary and contact -->
                  <div class="col-lg-4">
                      <div class="resume-side" data-aos="fade-right" data-aos-delay="100">
-                         <div class="profile-img mb-4">
+                         <div class="profile-img mb-5">
                              <img src="assets/img/profile/profile-square-2.webp" alt="Profile"
                                  class="img-fluid rounded" />
                          </div>
 
                          <h3>Professional Summary</h3>
                          <p>
-                             Driven software architect with expertise in developing
-                             scalable, high-performance enterprise solutions. Passionate
-                             about leveraging cutting-edge technologies to solve complex
-                             business challenges.
+                             Results-oriented Middleware Developer with deep expertise in webMethods and enterprise
+                             integration. Passionate about crafting robust, scalable systems that enhance performance
+                             and streamline operations. Adept at designing APIs, managing ESB environments, and
+                             executing seamless data migrations to support business agility and growth.
                          </p>
 
                          {{-- Contact Information --}}
@@ -106,6 +106,7 @@
                              <i class="bi bi-briefcase me-2"></i>Professional Experience
                          </h3>
 
+                         {{-- BSI --}}
                          <div class="resume-item">
                              <h4>Software Developer - Webmethods Developer</h4>
                              <h5>May 2025 - Present</h5>
@@ -115,16 +116,21 @@
                              </p>
                              <ul>
                                  <li>
-                                     Support performance test
+                                     Provided technical support for performance testing initiatives, ensuring system
+                                     stability and responsiveness under high-load conditions.
                                  </li>
                                  <li>
-                                     Support Simulation Test
+                                     Assisted in simulation testing to validate service behavior across various
+                                     scenarios, contributing to risk mitigation and deployment readiness.
                                  </li>
                                  <li>
-                                     Migrate service to higher version
+                                     Migrated integration services to higher platform versions, ensuring compatibility,
+                                     improved performance, and adherence to updated architectural standards.
                                  </li>
                              </ul>
                          </div>
+
+                         {{-- AIA --}}
                          <div class="resume-item">
                              <h4>IT Delivery - Webmethods Developer</h4>
                              <h5>April 2024 - Maret 2025</h5>
@@ -134,67 +140,244 @@
                              </p>
                              <ul>
                                  <li>
-                                     Set up and configure ESB environments, including creating connectors, adapters, and
-                                     APIs.
+                                     Set up and configured ESB environments, including the creation of connectors,
+                                     adapters, and APIs to enable seamless communication between enterprise systems.
                                  </li>
                                  <li>
-                                     Manage ESB instances across different environments (development, testing,
-                                     production).
+                                     Managed ESB instances across development, testing, and production environments,
+                                     ensuring consistency, reliability, and version control throughout the integration
+                                     lifecycle.
                                  </li>
                                  <li>
-                                     Establish communication between APIs through an API ESB, ensuring standardization
-                                     and security measures
+                                     Established secure and standardized communication between APIs via ESB,
+                                     implementing governance policies and enhancing interoperability across platforms.
                                  </li>
                              </ul>
                          </div>
+
+                         {{-- Wm Integration System (WIS) --}}
                          <div class="resume-item">
                              <h4>Middleware Developer</h4>
                              <h5>December 2023 - Maret 2024</h5>
                              <p class="company">
-                                 <i class="bi bi-building"></i> PT. Indocyber Global Teknologi
+                                 <i class="bi bi-building"></i> Wm Integration System (WIS) | PT. Indocyber Global
+                                 Teknologi
                              </p>
                              <ul>
                                  <li>
-                                     Develop API Rest JSON and Rest XML as provider JDBC Adapter MySQ
+                                     Developed RESTful APIs in JSON and XML formats using JDBC Adapter for MySQL,
+                                     enabling seamless data access and integration with external systems.
                                  </li>
                                  <li>
-                                     Develop API Soap XML as provider JDBC Adapter Oracle
+                                     Built SOAP-based XML APIs via JDBC Adapter for Oracle, supporting legacy system
+                                     interoperability and structured data exchange.
                                  </li>
                                  <li>
-                                     Develop API Log Handling
+                                     Engineered a centralized log handling API to monitor system activities, improve
+                                     traceability, and support debugging processes.
                                  </li>
                                  <li>
-                                     Develop a flow service to migrate the 'customers' data table from MySQL to the
-                                     'mst_customer' data table in the Oracle database using an API
+                                     Created flow services to automate data migration from MySQL to Oracle, transforming
+                                     and mapping customer records with precision and reliability.
                                  </li>
                                  <li>
-                                     Establish communication between APIs through an API ESB, ensuring standardization
-                                     and security measures.
+                                     Established inter-API communication through an ESB layer, enforcing standardized
+                                     protocols and robust security measures across services.
                                  </li>
                                  <li>
-                                     Each customer who possesses document files can upload them to the File Server, with
-                                     the file storage address being saved in the database. Additionally, they have the
-                                     capability to download files stored on the File Server
+                                     Enabled file upload and download functionality via File Server integration, with
+                                     dynamic storage path management and database linkage for document retrieval.
                                  </li>
                              </ul>
                          </div>
+
+                         {{-- PT DUS --}}
                          <div class="resume-item">
                              <h4>Middleware Developer </h4>
-                             <h5>May 2025 - Present</h5>
+                             <h5>July 2023 - November 2023</h5>
                              <p class="company">
                                  <i class="bi bi-building"></i> PT Dharmapala Usaha Sukses (Client) – PT. Indocyber
                                  Global Teknologi
                              </p>
                              <ul>
                                  <li>
-                                     Develop API for Mobile Applications using PHP and Laravel
+                                     Designed and implemented RESTful APIs for mobile applications using PHP and
+                                     Laravel, ensuring secure data exchange and optimal performance across platforms.
                                  </li>
                                  <li>
-                                     Engage in Fullstack development
+                                     Participated in fullstack development, contributing to both front-end and back-end
+                                     components to deliver cohesive and responsive user experiences.
                                  </li>
                              </ul>
                          </div>
 
+                         {{-- Exploring kafka, ELK, TC, UM --}}
+                         <div class="resume-item">
+                             <h4>Middleware Developer </h4>
+                             <h5>January 2023 - June 2023</h5>
+                             <p class="company">
+                                 <i class="bi bi-building"></i> PT. Indocyber Global Teknologi
+                             </p>
+                             <ul>
+                                 <li>
+                                     Conducting hands-on exploration of Kibana, Elasticsearch, and LogStash to enhance
+                                     observability and centralized logging in distributed systems.
+                                 </li>
+                                 <li>
+                                     Investigating Apache Kafka for implementing scalable, event-driven architectures
+                                     and real-time data streaming pipelines.
+                                 </li>
+                                 <li>
+                                     Evaluating Terracotta for distributed caching and session management to improve
+                                     application performance and resilience.
+                                 </li>
+                                 <li>
+                                     Deep-diving into Universal Messaging to optimize publish-subscribe models and
+                                     ensure reliable message delivery across enterprise applications.
+                                 </li>
+                             </ul>
+                         </div>
+
+                         {{-- Exploring & Certified Aris, WM Integration, WM API Management --}}
+                         <div class="resume-item">
+                             <h4>Middleware Developer </h4>
+                             <h5>November 2022 - December 2022</h5>
+                             <p class="company">
+                                 <i class="bi bi-building"></i> PT. Indocyber Global Teknologi
+                             </p>
+                             <ul>
+                                 <li>
+                                     Completed professional certification in webMethods Integration, mastering the
+                                     development of scalable integration flows, adapter configurations, and service
+                                     orchestration for enterprise-grade solutions.
+                                 </li>
+                                 <li>
+                                     Specialized in webMethods API Management, including API gateway setup, policy
+                                     enforcement, and lifecycle management to ensure secure and efficient API
+                                     consumption.
+                                 </li>
+                                 <li>
+                                     Explored webMethods.io Integration to build cloud-native workflows, connect SaaS
+                                     applications, and automate business processes with low-code tools and prebuilt
+                                     connectors.
+                                 </li>
+                                 <li>
+                                     Explored ARIS Modeler and ARIS Dashboard through structured online courses to
+                                     understand business process modeling, architecture visualization, and performance
+                                     tracking.
+                                 </li>
+                                 <li>
+                                     Gained hands-on experience as an ARIS Administrator, managing user roles,
+                                     repository configurations, and ensuring model governance within enterprise
+                                     environments.
+                                 </li>
+                                 <li>
+                                     Studied Alfabet to grasp IT portfolio management and enterprise architecture
+                                     alignment, focusing on strategic planning and capability mapping.
+                                 </li>
+
+                             </ul>
+                         </div>
+
+                         {{-- IMM --}}
+                         <div class="resume-item">
+                             <h4>Middleware Developer </h4>
+                             <h5>May 2022 - October 2022</h5>
+                             <p class="company">
+                                 <i class="bi bi-building"></i> Integrated Marketplace Management (IMM) | PT. Indocyber
+                                 Global Teknologi
+                             </p>
+                             <ul>
+                                 <li>
+                                     Integrated APIs from major e-commerce platforms including Blibli, JD.ID, Shopee,
+                                     TikTok Shop, and Tokopedia to enable seamless data exchange and real-time
+                                     transaction processing.
+                                 </li>
+                                 <li>
+                                     Collaborated with cross-functional teams to modify API and microservice
+                                     requirements based on evolving business needs, ensuring flexibility and scalability
+                                     in system architecture.
+                                 </li>
+                                 <li>
+                                     Enhanced integration workflows using WSO2, optimizing service orchestration,
+                                     message routing, and authentication mechanisms for improved performance and
+                                     reliability.
+                                 </li>
+                                 <li>
+                                     Conducted comprehensive API testing using Postman to validate endpoints, ensure
+                                     data integrity, and maintain consistent service behavior across environments.
+                                 </li>
+                                 <li>
+                                     Utilized webMethods Integration Server to manage backend services, streamline
+                                     communication between systems, and support enterprise-grade middleware operations.
+                                 </li>
+                                 <li>
+                                     Developed and maintained APIs using PHP and Laravel, contributing to robust backend
+                                     logic and efficient data handling for integrated platforms.
+                                 </li>
+                             </ul>
+                         </div>
+
+                         {{-- Exploring Tibco & RnD mini bank --}}
+                         <div class="resume-item">
+                             <h4>Middleware Developer </h4>
+                             <h5>March 2022 - April 2022</h5>
+                             <p class="company">
+                                 <i class="bi bi-building"></i> PT. Indocyber Global Teknologi
+                             </p>
+                             <ul>
+                                 <li>
+                                     Designed and implemented a prototype banking architecture using webMethods
+                                     Integration Server as part of a post-bootcamp R&D initiative, simulating core
+                                     banking flows such as customer onboarding, transaction processing, and service
+                                     orchestration.
+                                 </li>
+                                 <li>
+                                     Completed online certification courses in TIBCO technologies, gaining theoretical
+                                     proficiency in:
+                                     <ul>
+                                         <li><strong>TIBCO EBX:</strong> Master Data Management and governance
+                                             principles</li>
+                                         <li><strong>TIBCO BusinessWorks:</strong> Service creation, orchestration, and
+                                             integration patterns</li>
+                                         <li><strong>TIBCO BusinessWorks Container Edition:</strong> Messaging
+                                             architecture and containerized deployment strategies</li>
+                                     </ul>
+                                 </li>
+                                 <li>
+                                     Explored TIBCO’s enterprise integration stack (TCA, TCP, TCAM, TMC) to understand
+                                     modular service design, data flow management, and scalable middleware solutions.
+                                 </li>
+                             </ul>
+                         </div>
+
+                         {{-- Bootcamp --}}
+                         <div class="resume-item">
+                             <h4>Middleware Developer </h4>
+                             <h5>December 2021 - February 2022</h5>
+                             <p class="company">
+                                 <i class="bi bi-building"></i> PT. Indocyber Global Teknologi
+                             </p>
+                             <ul>
+                                 <li>
+                                     Gained practical experience in building enterprise-grade applications using Java
+                                     EE, Spring Framework, and MVC architecture, with a focus on modular design and
+                                     maintainability.
+                                 </li>
+                                 <li>
+                                     Developed and consumed Java Web Services (SOAP & REST), enabling system
+                                     interoperability and secure data exchange across platforms.
+                                 </li>
+                                 <li>
+                                     Applied JDBC for database connectivity and operations with SQL Server, including
+                                     query optimization and transaction handling.
+                                 </li>
+                                 <li>
+                                     Participated in structured development workflows, emphasizing clean code practices,
+                                     version control, and collaborative problem-solving.
+                                 </li>
+                             </ul>
+                         </div>
                      </div>
 
                      <!-- Education Section -->
@@ -218,12 +401,12 @@
 
                          <div class="resume-item">
                              <h4>Software AG Certified webMethods Integration Professional</h4>
-                             <h5>2022-2025</h5>
+                             <h5>2022 - 2025</h5>
                          </div>
 
                          <div class="resume-item">
                              <h4>Software AG Certified webMethods API Management Professional</h4>
-                             <h5>2023-2026</h5>
+                             <h5>2023 - 2026</h5>
                          </div>
                          <div class="resume-item">
                              <h4>Software AG Certified webMethods Integration Associate</h4>
