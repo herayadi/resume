@@ -53,20 +53,7 @@
 
                       </div>
 
-                      {{-- <div class="stats-grid">
-                          <div class="stat-item">
-                              <div class="stat-number">150+</div>
-                              <div class="stat-label">Projects Completed</div>
-                          </div>
-                          <div class="stat-item">
-                              <div class="stat-number">5+</div>
-                              <div class="stat-label">Years Experience</div>
-                          </div>
-                          <div class="stat-item">
-                              <div class="stat-number">98%</div>
-                              <div class="stat-label">Client Satisfaction</div>
-                          </div>
-                      </div> --}}
+                      
 
                       <div class="details-grid">
                           <div class="detail-row">
@@ -107,3 +94,4 @@
       </div>
   </section>
   <!-- /About Section -->
+<?php /**PATH E:\resume\resources\views/components/section/about.blade.php ENDPATH**/ ?>

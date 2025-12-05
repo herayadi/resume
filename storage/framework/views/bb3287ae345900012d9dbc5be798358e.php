@@ -30,7 +30,7 @@
                              executing seamless data migrations to support business agility and growth.
                          </p>
 
-                         {{-- Contact Information --}}
+                         
                          <h3 class="mt-4">Contact Information</h3>
                          <ul class="contact-info list-unstyled">
                              <li>
@@ -48,7 +48,7 @@
                              </li>
                          </ul>
 
-                         {{-- Technical Skills --}}
+                         
                          <div class="skills-animation mt-4">
                              <h3>Technical Skills</h3>
                              <div class="skill-item">
@@ -106,7 +106,7 @@
                              <i class="bi bi-briefcase me-2"></i>Professional Experience
                          </h3>
 
-                         {{-- BSI --}}
+                         
                          <div class="resume-item">
                              <h4>Software Developer - Webmethods Developer</h4>
                              <h5>May 2025 - Present</h5>
@@ -130,7 +130,7 @@
                              </ul>
                          </div>
 
-                         {{-- AIA --}}
+                         
                          <div class="resume-item">
                              <h4>IT Delivery - Webmethods Developer</h4>
                              <h5>April 2024 - Maret 2025</h5>
@@ -155,7 +155,7 @@
                              </ul>
                          </div>
 
-                         {{-- Wm Integration System (WIS) --}}
+                         
                          <div class="resume-item">
                              <h4>Middleware Developer</h4>
                              <h5>December 2023 - Maret 2024</h5>
@@ -191,7 +191,7 @@
                              </ul>
                          </div>
 
-                         {{-- PT DUS --}}
+                         
                          <div class="resume-item">
                              <h4>Middleware Developer </h4>
                              <h5>July 2023 - November 2023</h5>
@@ -211,7 +211,7 @@
                              </ul>
                          </div>
 
-                         {{-- Exploring kafka, ELK, TC, UM --}}
+                         
                          <div class="resume-item">
                              <h4>Middleware Developer </h4>
                              <h5>January 2023 - June 2023</h5>
@@ -238,7 +238,7 @@
                              </ul>
                          </div>
 
-                         {{-- Exploring & Certified Aris, WM Integration, WM API Management --}}
+                         
                          <div class="resume-item">
                              <h4>Middleware Developer </h4>
                              <h5>November 2022 - December 2022</h5>
@@ -279,7 +279,7 @@
                              </ul>
                          </div>
 
-                         {{-- IMM --}}
+                         
                          <div class="resume-item">
                              <h4>Middleware Developer </h4>
                              <h5>May 2022 - October 2022</h5>
@@ -318,7 +318,7 @@
                              </ul>
                          </div>
 
-                         {{-- Exploring Tibco & RnD mini bank --}}
+                         
                          <div class="resume-item">
                              <h4>Middleware Developer </h4>
                              <h5>March 2022 - April 2022</h5>
@@ -351,7 +351,7 @@
                              </ul>
                          </div>
 
-                         {{-- Bootcamp --}}
+                         
                          <div class="resume-item">
                              <h4>Middleware Developer </h4>
                              <h5>December 2021 - February 2022</h5>
@@ -422,3 +422,4 @@
          </div>
      </section>
      <!-- /Resume Section -->
+<?php /**PATH E:\resume\resources\views/components/section/resume.blade.php ENDPATH**/ ?>

@@ -10,7 +10,7 @@
 
         <x-section.skills />
 
-        <x-section.portofolio />
+        {{-- <x-section.portofolio /> --}}
 
         {{-- <x-section.services /> --}}
 

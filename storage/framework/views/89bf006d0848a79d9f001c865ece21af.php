@@ -16,3 +16,4 @@
          </div>
      </div>
  </footer>
+<?php /**PATH E:\resume\resources\views/components/footer.blade.php ENDPATH**/ ?>

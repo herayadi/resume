@@ -16,9 +16,9 @@
                  <li>
                      <a href="#skills"><i class="bi bi-hdd-stack navicon"></i> Skills</a>
                  </li>
-                 <li>
+                 {{-- <li>
                      <a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a>
-                 </li>
+                 </li> --}}
 
                  {{-- <li>
                      <a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a>

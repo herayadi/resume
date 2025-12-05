@@ -48,3 +48,4 @@
         </div>
     </section>
     <!-- /Hero Section -->
+<?php /**PATH E:\resume\resources\views/components/section/hero.blade.php ENDPATH**/ ?>
