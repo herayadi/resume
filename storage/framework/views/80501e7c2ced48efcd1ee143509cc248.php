@@ -11,11 +11,10 @@
                     <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
                         <div class="hero-text">
                             <h1><span class="accent-text">Hi</span></h1>
-                            <h2>I am Heri Rahmat</h2>
+                            <h2>I am <?php echo e($user->name); ?></h2>
                             <p class="lead">
                                 I'm a
-                                <span class="typed"
-                                    data-typed-items="Webmethods Developer, API and ESB Expert "></span>
+                                <span class="typed" data-typed-items="<?php echo e($user->role); ?>"></span>
                             </p>
                             <p class="description">
                                 Driving performance and scalability with clean integration, smart automation, and solid
@@ -28,9 +27,9 @@
                             </div>
 
                             <div class="social-links">
-                                <a href="https://github.com/herayadi"><i class="bi bi-github"></i></a>
-                                <a href="https://www.linkedin.com/in/heri-rahmat-suryadi/"><i
-                                        class="bi bi-linkedin"></i></a>
+                                <?php $__currentLoopData = $sosmeds; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $sosmed): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <a href="<?php echo e($sosmed->href); ?>"><i class="<?php echo e($sosmed->icon); ?>"></i></a>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             </div>
                         </div>
                     </div>
@@ -39,7 +38,8 @@
                         <div class="hero-visual">
                             <div class="profile-container">
                                 <div class="profile-background"></div>
-                                <img src="assets/img/profile/heri.jpg" alt="Heri Rahmat" class="profile-image" />
+                                <img src="assets/img/profile/<?php echo e($user->pict); ?>" alt="<?php echo e($user->pict); ?>"
+                                    class="profile-image" />
                             </div>
                         </div>
                     </div>

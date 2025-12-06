@@ -12,28 +12,41 @@
                   <div class="info-box">
                       <h3>Contact Info</h3>
 
-                      <a href="https://maps.app.goo.gl/5WSZ3LeMMNTkUEtUA" class="info-item">
+                      <a href="{{ $user->map }}" class="info-item">
                           <div class="icon-box">
                               <i class="bi bi-geo-alt"></i>
                           </div>
                           <div class="content">
                               <h4>Our Location</h4>
-                              <p>Grogol Petamburan</p>
-                              <p>Jakarta Barat, DKI Jakarta 11450</p>
+                              <p>{{ $user->city }}</p>
                           </div>
                       </a>
 
-                      <a href="https://github.com/herayadi" class="info-item">
-                          <div class="icon-box">
-                              <i class="bi bi-github"></i>
-                          </div>
-                          <div class="content">
-                              <h4>Herayadi</h4>
-                              <p>herayadi</p>
-                          </div>
-                      </a>
+                      @foreach ($sosmeds as $sosmed)
+                          @php
+                              $labelMap = [
+                                  'email' => 'Email Us',
+                                  'linkedin' => 'LinkedIn',
+                                  'github' => 'GitHub',
+                                  'location' => 'Our Location',
+                              ];
 
-                      <a href="mailto:herirahmatsuryadi@gmail.com" class="info-item">
+                              $sosmedType = $sosmed->type === 'email' ? 'mailto:' . $sosmed->href : $sosmed->href;
+                              $label = $labelMap[strtolower($sosmed->type)] ?? $sosmed->label;
+                          @endphp
+
+                          <a href="{{ $sosmedType }}" class="info-item">
+                              <div class="icon-box">
+                                  <i class="{{ $sosmed->icon }}"></i>
+                              </div>
+                              <div class="content">
+                                  <h4>{{ $label }}</h4>
+                                  <p>{{ $sosmed->label }}</p>
+                              </div>
+                          </a>
+                      @endforeach
+
+                      {{-- <a href="mailto:herirahmatsuryadi@gmail.com" class="info-item">
                           <div class="icon-box">
                               <i class="bi bi-envelope"></i>
                           </div>
@@ -41,7 +54,7 @@
                               <h4>Email Address</h4>
                               <p>herirahmatsuryadi@gmail.com</p>
                           </div>
-                      </a>
+                      </a> --}}
                   </div>
               </div>
 

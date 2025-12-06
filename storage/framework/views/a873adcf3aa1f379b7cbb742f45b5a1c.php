@@ -12,36 +12,41 @@
                   <div class="info-box">
                       <h3>Contact Info</h3>
 
-                      <a href="https://maps.app.goo.gl/5WSZ3LeMMNTkUEtUA" class="info-item">
+                      <a href="<?php echo e($user->map); ?>" class="info-item">
                           <div class="icon-box">
                               <i class="bi bi-geo-alt"></i>
                           </div>
                           <div class="content">
                               <h4>Our Location</h4>
-                              <p>Grogol Petamburan</p>
-                              <p>Jakarta Barat, DKI Jakarta 11450</p>
+                              <p><?php echo e($user->city); ?></p>
                           </div>
                       </a>
 
-                      <a href="https://github.com/herayadi" class="info-item">
-                          <div class="icon-box">
-                              <i class="bi bi-github"></i>
-                          </div>
-                          <div class="content">
-                              <h4>Herayadi</h4>
-                              <p>herayadi</p>
-                          </div>
-                      </a>
+                      <?php $__currentLoopData = $sosmeds; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $sosmed): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                          <?php
+                              $labelMap = [
+                                  'email' => 'Email Us',
+                                  'linkedin' => 'LinkedIn',
+                                  'github' => 'GitHub',
+                                  'location' => 'Our Location',
+                              ];
 
-                      <a href="mailto:herirahmatsuryadi@gmail.com" class="info-item">
-                          <div class="icon-box">
-                              <i class="bi bi-envelope"></i>
-                          </div>
-                          <div class="content">
-                              <h4>Email Address</h4>
-                              <p>herirahmatsuryadi@gmail.com</p>
-                          </div>
-                      </a>
+                              $sosmedType = $sosmed->type === 'email' ? 'mailto:' . $sosmed->href : $sosmed->href;
+                              $label = $labelMap[strtolower($sosmed->type)] ?? $sosmed->label;
+                          ?>
+
+                          <a href="<?php echo e($sosmedType); ?>" class="info-item">
+                              <div class="icon-box">
+                                  <i class="<?php echo e($sosmed->icon); ?>"></i>
+                              </div>
+                              <div class="content">
+                                  <h4><?php echo e($label); ?></h4>
+                                  <p><?php echo e($sosmed->label); ?></p>
+                              </div>
+                          </a>
+                      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+                      
                   </div>
               </div>
 

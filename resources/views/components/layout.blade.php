@@ -39,7 +39,7 @@
     </head>
 
     <body class="index-page">
-        <x-header />
+        <x-header :sosmeds="$sosmeds" />
 
         {{ $slot }}
 

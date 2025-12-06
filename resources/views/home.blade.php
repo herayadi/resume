@@ -1,12 +1,12 @@
-<x-layout>
+<x-layout :sosmeds="$sosmeds">
     <main class="main">
-        <x-section.hero />
+        <x-section.hero :user="$user" :sosmeds="$sosmeds" />
 
-        <x-section.about />
+        <x-section.about :user="$user" :sosmeds="$sosmeds" />
 
         {{-- <x-section.stat /> --}}
 
-        <x-section.resume />
+        <x-section.resume :user="$user" :sosmeds="$sosmeds" />
 
         <x-section.skills />
 
@@ -14,6 +14,6 @@
 
         {{-- <x-section.services /> --}}
 
-        <x-section.contact />
+        <x-section.contact :user="$user" :sosmeds="$sosmeds" />
     </main>
 </x-layout>

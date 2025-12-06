@@ -22,6 +22,7 @@ class UserSeeder extends Seeder
             'role'=>'Webmethods Developer, API and ESB Expert',
             'summary'=>'Results-oriented Middleware Developer with deep expertise in webMethods and enterprise integration. Passionate about crafting robust, scalable systems that enhance performance and streamline operations. Adept at designing APIs, managing ESB environments, and executing seamless data migrations to support business agility and growth.',
             'pict'=>'heri.jpg',
+            'map'=>'https://maps.app.goo.gl/xbjvQuEevdkiZRKK7'
         ]);
     }
 }

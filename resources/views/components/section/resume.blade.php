@@ -34,10 +34,23 @@
                          <h3 class="mt-4">Contact Information</h3>
                          <ul class="contact-info list-unstyled">
                              <li>
-                                 <a href="https://maps.app.goo.gl/xbjvQuEevdkiZRKK7"> <i class="bi bi-geo-alt"></i>
-                                     Jakarta Barat, DKI Jakarta, Indonesia</a>
+                                 <a href="{{ $user->map }}"> <i class="bi bi-geo-alt"></i>
+                                     {{ $user->city }}</a>
                              </li>
-                             <li>
+                             @foreach ($sosmeds as $sosmed)
+                                 @php
+                                     $sosmedType =
+                                         $sosmed->type === 'email' ? 'mailto:' . $sosmed->href : $sosmed->href;
+                                 @endphp
+
+                                 <li>
+                                     <a href="{{ $sosmedType }}"> <i class="{{ $sosmed->icon }}"></i>
+                                         {{ $sosmed->label }}
+                                     </a>
+                                 </li>
+                             @endforeach
+
+                             {{-- <li>
                                  <a href="mailto:herirahmatsuryadi@gmail.com"> <i class="bi bi-envelope"></i>
                                      herirahmatsuryadi@gmail.com
                                  </a>
@@ -45,7 +58,7 @@
                              <li>
                                  <a href="https://www.linkedin.com/in/heri-rahmat-suryadi/"> <i
                                          class="bi bi-linkedin"></i> Heri Rahmat Suryadi</a>
-                             </li>
+                             </li> --}}
                          </ul>
 
                          {{-- Technical Skills --}}

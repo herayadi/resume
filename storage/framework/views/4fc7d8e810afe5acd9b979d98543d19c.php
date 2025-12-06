@@ -14,23 +14,35 @@
                       </div>
 
                       <div class="profile-content">
-                          <h3>Heri Rahmat</h3>
-                          <p class="profession">Webmethods Developer</p>
-                          <p class="profession">API &amp; ESB Developer</p>
+                          <h3><?php echo e($user->name); ?></h3>
+                          <?php $__currentLoopData = explode(',', $user->role); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $role): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                              <p class="profession"><?php echo e(trim($role)); ?></p>
+                          <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+                          
 
                           <div class="contact-links">
-                              <a href="mailto:herirahmatsuryadi@gmail.com" class="contact-item">
-                                  <i class="bi bi-envelope"></i>
-                                  herirahmatsuryadi@gmail.com
-                              </a>
-                              <a href="https://github.com/herayadi" class="contact-item"><i class="bi bi-github"></i>
-                                  Herayadi
-                              </a>
-                              <a href="#" class="contact-item">
+                              <?php $__currentLoopData = $sosmeds; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $sosmed): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                  <?php
+                                      $sosmedType =
+                                          $sosmed->type === 'email' ? 'mailto:' . $sosmed->href : $sosmed->href;
+                                  ?>
+
+                                  <a href="<?php echo e($sosmedType); ?>" class="contact-item">
+                                      <i class="<?php echo e($sosmed->icon); ?>"></i>
+                                      <?php echo e($sosmed->label); ?>
+
+                                  </a>
+                              <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+
+                              <a href="<?php echo e($user->map); ?>" class="contact-item">
                                   <i class="bi bi-geo-alt"></i>
-                                  Jakarta, Indonesia
+                                  <?php echo e($user->city); ?>
+
                               </a>
                           </div>
+
                       </div>
                   </div>
               </div>
@@ -52,8 +64,6 @@
                           </p>
 
                       </div>
-
-                      
 
                       <div class="details-grid">
                           <div class="detail-row">
@@ -83,7 +93,7 @@
                               <i class="bi bi-download"></i>
                               Download Resume
                           </a>
-                          <a href="#" class="btn btn-outline">
+                          <a href="#contact" class="btn btn-outline">
                               <i class="bi bi-chat-dots"></i>
                               Let's Talk
                           </a>

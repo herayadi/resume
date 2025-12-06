@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('dob');
             $table->string('website');
             $table->string('city');
+            $table->string('map');
             $table->string('role');
             $table->string('summary');
             $table->string('pict');

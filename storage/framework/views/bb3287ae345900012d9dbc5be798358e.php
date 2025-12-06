@@ -34,18 +34,24 @@
                          <h3 class="mt-4">Contact Information</h3>
                          <ul class="contact-info list-unstyled">
                              <li>
-                                 <a href="https://maps.app.goo.gl/xbjvQuEevdkiZRKK7"> <i class="bi bi-geo-alt"></i>
-                                     Jakarta Barat, DKI Jakarta, Indonesia</a>
+                                 <a href="<?php echo e($user->map); ?>"> <i class="bi bi-geo-alt"></i>
+                                     <?php echo e($user->city); ?></a>
                              </li>
-                             <li>
-                                 <a href="mailto:herirahmatsuryadi@gmail.com"> <i class="bi bi-envelope"></i>
-                                     herirahmatsuryadi@gmail.com
-                                 </a>
-                             </li>
-                             <li>
-                                 <a href="https://www.linkedin.com/in/heri-rahmat-suryadi/"> <i
-                                         class="bi bi-linkedin"></i> Heri Rahmat Suryadi</a>
-                             </li>
+                             <?php $__currentLoopData = $sosmeds; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $sosmed): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                 <?php
+                                     $sosmedType =
+                                         $sosmed->type === 'email' ? 'mailto:' . $sosmed->href : $sosmed->href;
+                                 ?>
+
+                                 <li>
+                                     <a href="<?php echo e($sosmedType); ?>"> <i class="<?php echo e($sosmed->icon); ?>"></i>
+                                         <?php echo e($sosmed->label); ?>
+
+                                     </a>
+                                 </li>
+                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+                             
                          </ul>
 
                          

@@ -5,7 +5,7 @@
          <nav id="navmenu" class="navmenu">
              <ul>
                  <li>
-                     <a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a>
+                     <a href="#" class="active"><i class="bi bi-house navicon"></i>Home</a>
                  </li>
                  <li>
                      <a href="#about"><i class="bi bi-person navicon"></i> About</a>
@@ -19,7 +19,7 @@
                  
 
                  
-                 
+
                  <li>
                      <a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a>
                  </li>
@@ -27,10 +27,16 @@
          </nav>
 
          <div class="social-links text-center">
-             <a href="https://github.com/herayadi"><i class="bi bi-github"></i></a>
-             <a href="mailto:herirahmatsuryadi@gmail.com" class="envelope"><i class="bi bi-envelope"></i></a>
-             <a href="https://www.linkedin.com/in/heri-rahmat-suryadi" class="linkedin"><i
-                     class="bi bi-linkedin"></i></a>
+             <?php $__currentLoopData = $sosmeds; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $sosmed): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                 <?php
+                     $sosmedType = $sosmed->type === 'email' ? 'mailto:' . $sosmed->href : $sosmed->href;
+                 ?>
+
+                 <a href="<?php echo e($sosmedType); ?>"><i class="<?php echo e($sosmed->icon); ?>"></i></a>
+             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+             
+             
          </div>
      </div>
  </header>

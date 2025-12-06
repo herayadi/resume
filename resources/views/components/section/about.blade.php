@@ -14,23 +14,34 @@
                       </div>
 
                       <div class="profile-content">
-                          <h3>Heri Rahmat</h3>
-                          <p class="profession">Webmethods Developer</p>
-                          <p class="profession">API &amp; ESB Developer</p>
+                          <h3>{{ $user->name }}</h3>
+                          @foreach (explode(',', $user->role) as $role)
+                              <p class="profession">{{ trim($role) }}</p>
+                          @endforeach
+
+                          {{-- <p class="profession">Webmethods Developer</p>
+                          <p class="profession">API &amp; ESB Developer</p> --}}
 
                           <div class="contact-links">
-                              <a href="mailto:herirahmatsuryadi@gmail.com" class="contact-item">
-                                  <i class="bi bi-envelope"></i>
-                                  herirahmatsuryadi@gmail.com
-                              </a>
-                              <a href="https://github.com/herayadi" class="contact-item"><i class="bi bi-github"></i>
-                                  Herayadi
-                              </a>
-                              <a href="#" class="contact-item">
+                              @foreach ($sosmeds as $sosmed)
+                                  @php
+                                      $sosmedType =
+                                          $sosmed->type === 'email' ? 'mailto:' . $sosmed->href : $sosmed->href;
+                                  @endphp
+
+                                  <a href="{{ $sosmedType }}" class="contact-item">
+                                      <i class="{{ $sosmed->icon }}"></i>
+                                      {{ $sosmed->label }}
+                                  </a>
+                              @endforeach
+
+
+                              <a href="{{ $user->map }}" class="contact-item">
                                   <i class="bi bi-geo-alt"></i>
-                                  Jakarta, Indonesia
+                                  {{ $user->city }}
                               </a>
                           </div>
+
                       </div>
                   </div>
               </div>
@@ -52,21 +63,6 @@
                           </p>
 
                       </div>
-
-                      {{-- <div class="stats-grid">
-                          <div class="stat-item">
-                              <div class="stat-number">150+</div>
-                              <div class="stat-label">Projects Completed</div>
-                          </div>
-                          <div class="stat-item">
-                              <div class="stat-number">5+</div>
-                              <div class="stat-label">Years Experience</div>
-                          </div>
-                          <div class="stat-item">
-                              <div class="stat-number">98%</div>
-                              <div class="stat-label">Client Satisfaction</div>
-                          </div>
-                      </div> --}}
 
                       <div class="details-grid">
                           <div class="detail-row">
@@ -96,7 +92,7 @@
                               <i class="bi bi-download"></i>
                               Download Resume
                           </a>
-                          <a href="#" class="btn btn-outline">
+                          <a href="#contact" class="btn btn-outline">
                               <i class="bi bi-chat-dots"></i>
                               Let's Talk
                           </a>
