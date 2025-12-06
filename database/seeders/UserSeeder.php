@@ -14,14 +14,14 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         User::create([
-            'name'=>'Regina Septianadrah',
-            'phoneNum'=>'(62)81295656710',
-            'dob'=>'06/09/1996',
-            'website'=>'reginaseptianadrah.great-site.net',
-            'city'=>'Jakarta Selatan, DKI Jakarta, Indonesia',
-            'role'=>'BIM Modeler',
-            'summary'=>'Highly skilled Structural Drafter with over nine years of experience in the architecture, engineering, and construction industry, specializing in Revit, AutoCAD, and advanced Point Cloud integration to deliver precise, compliant structural models and drawings. Adept at collaborating directly with BIM leadership, meeting tight deadlines, and adapting to evolving design requirements across both local and international projects.',
-            'pict'=>'regina-profile-img.jpg',
+            'name'=>'Heri Rahmat Suryadi',
+            'phoneNum'=>'(62)85179979609',
+            'dob'=>'14/12/1997',
+            'website'=>'heri-rahmat.great-site.net',
+            'city'=>'Jakarta Barat, DKI Jakarta, Indonesia',
+            'role'=>'Webmethods Developer, API and ESB Expert',
+            'summary'=>'Results-oriented Middleware Developer with deep expertise in webMethods and enterprise integration. Passionate about crafting robust, scalable systems that enhance performance and streamline operations. Adept at designing APIs, managing ESB environments, and executing seamless data migrations to support business agility and growth.',
+            'pict'=>'heri.jpg',
         ]);
     }
 }
