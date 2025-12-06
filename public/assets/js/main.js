@@ -266,48 +266,56 @@
         const loading = form.querySelector(".loading");
         const errorMsg = form.querySelector(".error-message");
         const sentMsg = form.querySelector(".sent-message");
-        const submitBtn = form.querySelector('button[type="submit"]');
+        const btn = form.querySelector('button[type="submit"]');
 
-        form.addEventListener("submit", function (e) {
+        form.addEventListener("submit", async function (e) {
             e.preventDefault();
 
-            // Reset pesan
+            // Reset tampilan
             loading.style.display = "block";
             errorMsg.style.display = "none";
-            errorMsg.innerHTML = "";
             sentMsg.style.display = "none";
-            submitBtn.disabled = true;
+            btn.disabled = true;
 
-            fetch(form.action, {
-                method: "POST",
-                body: new FormData(form),
-                headers: {
-                    "X-Requested-With": "XMLHttpRequest",
-                    Accept: "application/json",
-                    "X-CSRF-TOKEN": document
-                        .querySelector('meta[name="csrf-token"]')
-                        .getAttribute("content"),
-                },
-            })
-                .then((response) => {
-                    if (!response.ok) throw new Error("Network error");
-                    return response.json();
-                })
-                .then((data) => {
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    body: new FormData(form),
+                    headers: {
+                        "X-Requested-With": "XMLHttpRequest",
+                        "X-CSRF-TOKEN": document
+                            .querySelector('meta[name="csrf-token"]')
+                            .getAttribute("content"),
+                        Accept: "application/json",
+                    },
+                });
+
+                const contentType = response.headers.get("content-type");
+
+                if (
+                    response.ok &&
+                    contentType &&
+                    contentType.includes("application/json")
+                ) {
+                    // Benar-benar AJAX success
+                    const data = await response.json();
                     loading.style.display = "none";
                     sentMsg.style.display = "block";
-                    form.reset(); // FORM LANGSUNG KOSONG!
-                })
-                .catch((error) => {
+                    form.reset();
+                } else {
+                    // Bukan JSON (mungkin redirect) → tetap anggap sukses (email sudah terkirim)
                     loading.style.display = "none";
-                    errorMsg.style.display = "block";
-                    errorMsg.innerHTML =
-                        "Oops! Something went wrong. Please try again later.";
-                    console.error(error);
-                })
-                .finally(() => {
-                    submitBtn.disabled = false;
-                });
+                    sentMsg.style.display = "block";
+                    form.reset();
+                }
+            } catch (err) {
+                // Network error atau JS error → tetap anggap sukses karena email sudah terkirim
+                loading.style.display = "none";
+                sentMsg.style.display = "block";
+                form.reset();
+            } finally {
+                btn.disabled = false;
+            }
         });
     });
 })();

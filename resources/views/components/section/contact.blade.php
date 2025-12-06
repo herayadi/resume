@@ -84,6 +84,14 @@
                                       Your message has been sent. Thank you!
                                   </div>
 
+                                  @if (session('success'))
+                                      <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                          {{ session('success') }}
+                                          <button type="button" class="btn" data-bs-dismiss="alert">Send
+                                              Message</button>
+                                      </div>
+                                  @endif
+
                                   <button type="submit" class="btn">Send Message</button>
                               </div>
                           </div>

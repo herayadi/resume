@@ -23,9 +23,10 @@ public function store(Request $request)
         // Kirim email ke kamu
         Mail::to('herirahmatsuryadi@gmail.com')->send(new ContactMail($data));
 
-        // Response AJAX (dipakai oleh template)
-        return response()->json([
-            'message' => 'Your message has been sent. Thank you!'
-        ]);
+        if ($request->ajax() || $request->wantsJson()) {
+            return response()->json(['message' => 'Your message has been sent. Thank you!']);
+        }
+        
+        return back()->with('success', 'Your message has been sent. Thank you!');
     }
 }
