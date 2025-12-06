@@ -6,7 +6,7 @@
 
         {{-- <x-section.stat /> --}}
 
-        <x-section.resume :user="$user" :sosmeds="$sosmeds" />
+        <x-section.resume :user="$user" :sosmeds="$sosmeds" :experiences="$experiences" />
 
         <x-section.skills />
 

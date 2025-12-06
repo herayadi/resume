@@ -55,14 +55,14 @@
 
         <?php if (isset($component)) { $__componentOriginal4b5aa16bc232ed15e5331f267abe4295 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal4b5aa16bc232ed15e5331f267abe4295 = $attributes; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.section.resume','data' => ['user' => $user,'sosmeds' => $sosmeds]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.section.resume','data' => ['user' => $user,'sosmeds' => $sosmeds,'experiences' => $experiences]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('section.resume'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
 <?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['user' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($user),'sosmeds' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($sosmeds)]); ?>
+<?php $component->withAttributes(['user' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($user),'sosmeds' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($sosmeds),'experiences' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($experiences)]); ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginal4b5aa16bc232ed15e5331f267abe4295)): ?>

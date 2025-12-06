@@ -17,11 +17,11 @@ class Client extends Model
     ];
 
     public function company() { 
-        return $this->belongsTo(Company::class); 
+        return $this->belongsTo(Company::class, 'companyId'); 
     }
 
 
     public function experiences() { 
-        return $this->hasMany(Experience::class); 
+        return $this->hasMany(Experience::class, 'clientId'); 
     }
 }
