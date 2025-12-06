@@ -147,6 +147,20 @@ h6 {
     }
 }
 
+.send-email-form .loading,
+.sent-message,
+.error-message {
+    display: none;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.send-email-form .sent-message {
+    color: #28a745;
+}
+.send-email-form .error-message {
+    color: #dc3545;
+}
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/

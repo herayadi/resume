@@ -45,16 +45,6 @@
                               </div>
                           </a>
                       @endforeach
-
-                      {{-- <a href="mailto:herirahmatsuryadi@gmail.com" class="info-item">
-                          <div class="icon-box">
-                              <i class="bi bi-envelope"></i>
-                          </div>
-                          <div class="content">
-                              <h4>Email Address</h4>
-                              <p>herirahmatsuryadi@gmail.com</p>
-                          </div>
-                      </a> --}}
                   </div>
               </div>
 
@@ -65,7 +55,8 @@
                           Reach out—whether it’s a project, a question, or just to say hello.
                       </p>
 
-                      <form action="forms/contact.php" method="post" class="php-email-form">
+                      <form action="{{ route('contact.store') }}" method="post" class="send-email-form">
+                          @csrf
                           <div class="row gy-4">
                               <div class="col-md-6">
                                   <input type="text" name="name" class="form-control" placeholder="Your Name"

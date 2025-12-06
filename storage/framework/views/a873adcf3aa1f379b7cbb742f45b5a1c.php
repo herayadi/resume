@@ -45,8 +45,6 @@
                               </div>
                           </a>
                       <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-
-                      
                   </div>
               </div>
 
@@ -57,7 +55,8 @@
                           Reach out—whether it’s a project, a question, or just to say hello.
                       </p>
 
-                      <form action="forms/contact.php" method="post" class="php-email-form">
+                      <form action="<?php echo e(route('contact.store')); ?>" method="post" class="send-email-form">
+                          <?php echo csrf_field(); ?>
                           <div class="row gy-4">
                               <div class="col-md-6">
                                   <input type="text" name="name" class="form-control" placeholder="Your Name"

@@ -7,6 +7,7 @@
         <title><?php echo e(config('app.name', 'Resume Heri')); ?></title>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
+        <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
 
         <!-- Favicons -->
         <link href="<?php echo e(asset('assets/img/favicon.png')); ?>" rel="icon" />
