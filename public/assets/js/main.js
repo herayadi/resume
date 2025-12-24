@@ -266,16 +266,22 @@
         const loading = form.querySelector(".loading");
         const errorMsg = form.querySelector(".error-message");
         const sentMsg = form.querySelector(".sent-message");
-        const btn = form.querySelector('button[type="submit"]');
+        const submitBtn = form.querySelector('button[type="submit"]');
+
+        // Reset status
+        function resetStatus() {
+            loading.style.display = "none";
+            errorMsg.style.display = "none";
+            errorMsg.innerHTML = "";
+            sentMsg.style.display = "none";
+        }
 
         form.addEventListener("submit", async function (e) {
             e.preventDefault();
 
-            // Reset tampilan
+            resetStatus();
             loading.style.display = "block";
-            errorMsg.style.display = "none";
-            sentMsg.style.display = "none";
-            btn.disabled = true;
+            submitBtn.disabled = true;
 
             try {
                 const response = await fetch(form.action, {
@@ -283,38 +289,49 @@
                     body: new FormData(form),
                     headers: {
                         "X-Requested-With": "XMLHttpRequest",
-                        "X-CSRF-TOKEN": document
-                            .querySelector('meta[name="csrf-token"]')
-                            .getAttribute("content"),
                         Accept: "application/json",
+                        // Tidak perlu X-CSRF-TOKEN karena @csrf sudah include _token di FormData
                     },
                 });
 
+                // Selalu coba parse JSON jika memungkinkan
+                let data = {};
                 const contentType = response.headers.get("content-type");
+                if (contentType && contentType.includes("application/json")) {
+                    data = await response.json();
+                }
 
-                if (
-                    response.ok &&
-                    contentType &&
-                    contentType.includes("application/json")
-                ) {
-                    // Benar-benar AJAX success
-                    const data = await response.json();
+                if (response.ok) {
+                    // Status 200-299 → sukses
                     loading.style.display = "none";
                     sentMsg.style.display = "block";
                     form.reset();
                 } else {
-                    // Bukan JSON (mungkin redirect) → tetap anggap sukses (email sudah terkirim)
+                    // Error (misalnya 422 validation)
                     loading.style.display = "none";
-                    sentMsg.style.display = "block";
-                    form.reset();
+                    errorMsg.style.display = "block";
+
+                    if (data.message) {
+                        errorMsg.innerHTML = data.message;
+                    }
+
+                    if (data.errors) {
+                        // Tampilkan error validasi Laravel
+                        const errors = Object.values(data.errors).flat();
+                        errorMsg.innerHTML = errors.join("<br>");
+                    } else {
+                        errorMsg.innerHTML =
+                            "Terjadi kesalahan. Silakan coba lagi.";
+                    }
                 }
             } catch (err) {
-                // Network error atau JS error → tetap anggap sukses karena email sudah terkirim
-                loading.style.display = "none";
-                sentMsg.style.display = "block";
-                form.reset();
+                // Network error atau fetch gagal
+                resetStatus();
+                errorMsg.style.display = "block";
+                errorMsg.innerHTML =
+                    "Tidak dapat terhubung ke server. Periksa koneksi internet Anda.";
             } finally {
-                btn.disabled = false;
+                submitBtn.disabled = false;
             }
         });
     });

@@ -12,10 +12,10 @@ public function store(Request $request)
     {
         // Validasi
         $data = $request->validate([
-            'name'    => 'required|string|max:100',
-            'email'   => 'required|email|max:100',
-            'subject' => 'required|string|max:200',
-            'message' => 'required|string|max:2500',
+            'name'    => 'required|string|max:255',
+            'email'   => 'required|email',
+            'subject' => 'required|string|max:255',
+            'message' => 'required|string',
         ]);
 
         // dd($data);
@@ -24,9 +24,9 @@ public function store(Request $request)
         Mail::to('herirahmatsuryadi@gmail.com')->send(new ContactMail($data));
 
         if ($request->ajax() || $request->wantsJson()) {
-            return response()->json(['message' => 'Your message has been sent. Thank you!']);
+            return response()->json(['message' => 'Pesan berhasil dikirim!']);
         }
         
-        return back()->with('success', 'Your message has been sent. Thank you!');
+        return redirect()->back()->with('success', 'Pesan berhasil dikirim!');
     }
 }

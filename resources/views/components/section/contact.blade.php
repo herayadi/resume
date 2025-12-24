@@ -55,7 +55,7 @@
                           Reach out—whether it’s a project, a question, or just to say hello.
                       </p>
 
-                      <form action="{{ route('contact.store') }}" method="post" class="send-email-form">
+                      {{-- <form action="{{ route('contact.store') }}" method="post" class="send-email-form">
                           @csrf
                           <div class="row gy-4">
                               <div class="col-md-6">
@@ -93,6 +93,57 @@
                                   @endif
 
                                   <button type="submit" class="btn">Send Message</button>
+                              </div>
+                          </div>
+                      </form> --}}
+
+                      <form action="{{ route('contact.store') }}" method="post" class="send-email-form">
+                          @csrf
+                          <div class="row gy-4">
+                              <div class="col-md-6">
+                                  <input type="text" name="name" class="form-control" placeholder="Your Name"
+                                      required />
+                              </div>
+
+                              <div class="col-md-6">
+                                  <input type="email" name="email" class="form-control" placeholder="Your Email"
+                                      required />
+                              </div>
+
+                              <div class="col-12">
+                                  <input type="text" name="subject" class="form-control" placeholder="Subject"
+                                      required />
+                              </div>
+
+                              <div class="col-12">
+                                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                              </div>
+
+                              <div class="col-12 text-center">
+                                  <div class="loading" style="display: none;">Loading...</div>
+                                  <div class="error-message" style="display: none;"></div>
+                                  <div class="sent-message" style="display: none;">
+                                      Your message has been sent. Thank you!
+                                  </div>
+
+                                  <!-- Flash message dari server (jika reload) -->
+                                  @if (session('success'))
+                                      <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+                                          {{ session('success') }}
+                                          <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                              aria-label="Close"></button>
+                                      </div>
+                                  @endif
+
+                                  @if (session('error'))
+                                      <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+                                          {{ session('error') }}
+                                          <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                              aria-label="Close"></button>
+                                      </div>
+                                  @endif
+
+                                  <button type="submit" class="btn btn-primary mt-3">Send Message</button>
                               </div>
                           </div>
                       </form>
