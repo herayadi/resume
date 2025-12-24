@@ -30,6 +30,9 @@
         <!-- Main CSS File -->
         <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet" />
 
+        <!-- SweetAlert -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
         <!-- =======================================================
   * Template Name: SnapFolio
   * Template URL: https://bootstrapmade.com/snapfolio-bootstrap-portfolio-template/
@@ -67,6 +70,9 @@
 
         <!-- Main JS File -->
         <script src="{{ asset('assets/js/main.js') }}"></script>
+
+        <!-- SweetAlert -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </body>
 
 </html>

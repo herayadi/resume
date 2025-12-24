@@ -263,25 +263,14 @@
         const form = document.querySelector(".send-email-form");
         if (!form) return;
 
-        const loading = form.querySelector(".loading");
-        const errorMsg = form.querySelector(".error-message");
-        const sentMsg = form.querySelector(".sent-message");
         const submitBtn = form.querySelector('button[type="submit"]');
-
-        // Reset status
-        function resetStatus() {
-            loading.style.display = "none";
-            errorMsg.style.display = "none";
-            errorMsg.innerHTML = "";
-            sentMsg.style.display = "none";
-        }
 
         form.addEventListener("submit", async function (e) {
             e.preventDefault();
 
-            resetStatus();
-            loading.style.display = "block";
+            // Tampilkan loading sederhana di tombol (opsional)
             submitBtn.disabled = true;
+            submitBtn.innerHTML = "Sending...";
 
             try {
                 const response = await fetch(form.action, {
@@ -290,11 +279,9 @@
                     headers: {
                         "X-Requested-With": "XMLHttpRequest",
                         Accept: "application/json",
-                        // Tidak perlu X-CSRF-TOKEN karena @csrf sudah include _token di FormData
                     },
                 });
 
-                // Selalu coba parse JSON jika memungkinkan
                 let data = {};
                 const contentType = response.headers.get("content-type");
                 if (contentType && contentType.includes("application/json")) {
@@ -302,36 +289,48 @@
                 }
 
                 if (response.ok) {
-                    // Status 200-299 → sukses
-                    loading.style.display = "none";
-                    sentMsg.style.display = "block";
-                    form.reset();
+                    // SUKSES → Popup centang hijau
+                    Swal.fire({
+                        icon: "success",
+                        title: "Berhasil!",
+                        text: data.message || "Pesan berhasil dikirim!",
+                        confirmButtonText: "OK",
+                        allowOutsideClick: false,
+                    });
+
+                    form.reset(); // Kosongkan form
                 } else {
-                    // Error (misalnya 422 validation)
-                    loading.style.display = "none";
-                    errorMsg.style.display = "block";
+                    // GAGAL (validasi atau error lain) → Popup silang merah
+                    let errorText = "Terjadi kesalahan. Silakan coba lagi.";
 
                     if (data.message) {
-                        errorMsg.innerHTML = data.message;
+                        errorText = data.message;
+                    }
+                    if (data.errors) {
+                        const errors = Object.values(data.errors).flat();
+                        errorText = errors.join("\n");
                     }
 
-                    if (data.errors) {
-                        // Tampilkan error validasi Laravel
-                        const errors = Object.values(data.errors).flat();
-                        errorMsg.innerHTML = errors.join("<br>");
-                    } else {
-                        errorMsg.innerHTML =
-                            "Terjadi kesalahan. Silakan coba lagi.";
-                    }
+                    Swal.fire({
+                        icon: "error",
+                        title: "Gagal!",
+                        text: errorText,
+                        confirmButtonText: "OK",
+                        allowOutsideClick: false,
+                    });
                 }
             } catch (err) {
-                // Network error atau fetch gagal
-                resetStatus();
-                errorMsg.style.display = "block";
-                errorMsg.innerHTML =
-                    "Tidak dapat terhubung ke server. Periksa koneksi internet Anda.";
+                // Network error → Popup error
+                Swal.fire({
+                    icon: "error",
+                    title: "Koneksi Gagal",
+                    text: "Tidak dapat terhubung ke server. Periksa internet Anda.",
+                    confirmButtonText: "OK",
+                });
             } finally {
+                // Kembalikan tombol
                 submitBtn.disabled = false;
+                submitBtn.innerHTML = "Send Message";
             }
         });
     });
